@@ -1,0 +1,34 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/homenavbar.ejs') %>
+
+
+<body>
+   <div class="container">
+    <hr>
+    <div class="jumbotron">
+        <h1 class="display-4">Bem-vindo</h1>
+        <p class="lead">Este é um simples blog do Thiago Déric</p>
+        <hr class="my-4">
+        <h2>Projeto de um programador em início, feito para testar conhecimento e técnicas de programação</h2>
+      </div>
+     <hr>
+    <% articles.forEach(article => { %>
+        <div class="card">
+            <div class="card-header">
+                <h2><%= article.title %></h2>
+            </div>
+            <div class="card-body">
+                <a href ="/<%=article.slug%>"class="btn btn-success">Ler artigo</a>
+            </div>
+        </div>
+        <br>
+   <%  }) %>
+
+
+
+</body>
+
+
+<%- include('./partials/footer.ejs') %>
+
+
