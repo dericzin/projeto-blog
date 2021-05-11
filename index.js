@@ -49,26 +49,6 @@ app.use("/", articlesController);
 app.use("/", adminController);
 
 
-app.get("/session", (req, res) => {
-    req.session.treinamento ="Formação Node.js"
-    req.session.ano = 2019
-    req.session.email = "tdrb_@user.com"
-    req.session.user = {
-        username: "Thiaguinho",
-        email: "tdrb_@user.com"
-    }
-    res.send("Sessão gerada!");
-});
-
-app.get("/leitura", (req, res) => {
-    res.json({
-        treinamento: req.session.treinamento,
-        ano: req.session.ano,
-        email: req.session.email,
-        user: req.session.user
-    })
-});
-
 
 app.get("/", (req, res) => {
 
