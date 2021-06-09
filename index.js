@@ -36,8 +36,8 @@ app.use(express.json());
 connection.authenticate()
     .then(() => {
         console.log("Conexão feita com sucesso!");
-    }).catch((error) => {
-        console.log(error);
+    }).catch((err) => {
+        console.log(err);
     })
 
 
@@ -107,7 +107,7 @@ app.get("/category/:slug", (req, res) => {
 
 
 
-const port = 3000
+const port = 10
 
 app.listen(port, () => {
     console.log("App running on the port: ", port);

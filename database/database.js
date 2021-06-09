@@ -1,7 +1,8 @@
 const Sequelize = require('sequelize');
 
-const connection = new Sequelize('projetoblog','dericth','thiagoderic1',{
-    host: 'mysql743.umbler.com',
+
+const connection = new Sequelize('projeto-blog','root','Milly2021',{
+    host: 'localhost',
     dialect: 'mysql',
     logging: false,
     timezone: "-03:00"
